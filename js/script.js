@@ -10,7 +10,7 @@ class AddressBook {
       document.querySelector("#full-name").value,
       document.querySelector("#user-email").value,
       document.querySelector("#phone-number").value,
-      document.querySelector("#relationship").value
+      document.querySelector("#relation").value
     );
     this.contacts.push(newContact);
     this.display();

@@ -7,9 +7,11 @@ body {
 
 .container {
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 h1 {
