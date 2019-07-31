@@ -1,0 +1,61 @@
+body {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: "maven pro";
+}
+
+.container {
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+form {
+  background: rgb(179, 178, 176, 0.6);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 40%;
+  padding: 35px;
+}
+
+input {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  width: 250px;
+  height: auto;
+  padding: 3px 10px;
+  margin: 50px 20px;
+  position: relative;
+}
+
+i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
