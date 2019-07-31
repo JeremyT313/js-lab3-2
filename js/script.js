@@ -36,7 +36,7 @@ class AddressBook {
   }
   display() {
     document.querySelector(".container").innerHTML = "";
-    this.contacts.forEach(person => {
+    this.contacts.forEach((person, index) => {
       const div = document.createElement("div");
       div.classList.add("card");
       div.innerHTML = `
@@ -44,13 +44,13 @@ class AddressBook {
       <p>Email: ${person.email}</p>
       <p>Phone: ${person.phone}</p>
       <p>Relation: ${person.relation}</p>
-      <i class="fas fa-trash" />
+      <i index=${index} class="fas fa-trash" />
       `;
       document.querySelector(".container").append(div);
     });
   }
-  deleteAt() {
-    document.querySelector(".card").remove();
+  deleteAt(index) {
+    this.contacts.splice(index, 1);
   }
 }
 
@@ -71,7 +71,12 @@ const addressBook = new AddressBook();
 document
   .querySelector("form")
   .addEventListener("submit", event => addressBook.add(event));
-document
-  .querySelector(".container")
-  .addEventListener("click", addressBook.deleteAt);
-addressBook.display();
+document.querySelector(".container").addEventListener("click", deleteContact);
+
+function deleteContact(e) {
+  if (e.target.classList.contains("fa-trash")) {
+    const index = e.target.getAttribute("index");
+    addressBook.deleteAt(index);
+    addressBook.display();
+  }
+}
